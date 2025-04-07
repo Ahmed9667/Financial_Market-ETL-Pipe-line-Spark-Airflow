@@ -25,8 +25,40 @@ insights.
 Before Runing Airflow Dag must make sure dependencies of Linux Environment are existed:
 
 ### 1.Java:
+#### Step-by-Step Fix for PySpark with Airflow using Java 17
 ```bash
-#Step-by-Step Fix for PySpark with Airflow using Java 17
 sudo apt update
 sudo apt install openjdk-17-jre-headless
 ```
+#### Set JAVA_HOME for Java 17
+```bash
+sudo update-alternatives --config java
+```
+
+#### then:
+```bash
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64' >> ~/.bashrc
+echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+#### Verify:
+```bash
+echo $JAVA_HOME
+java -version
+```
+
+### 2.PostgreSQL:
+#### Check PostgreSQL Status
+```bash
+sudo service postgresql status
+```
+
+#### Create database we use (vantage)
+```bash
+CREATE DATABASE vantage;
+\q
+```
+
+![image](https://github.com/user-attachments/assets/945d3141-761c-4379-83cf-177c1b31f4a9)
+
