@@ -20,3 +20,13 @@ insights.
   ### Data Structure:
   
   ![image](https://github.com/user-attachments/assets/e304e1fc-ce88-4608-93a2-3ae25f9ecb62)
+
+## Notes:
+Before Runing Airflow Dag must make sure dependencies of Linux Environment are existed:
+
+### 1.Java:
+```bash
+#Step-by-Step Fix for PySpark with Airflow using Java 17
+sudo apt update
+sudo apt install openjdk-17-jre-headless
+```
